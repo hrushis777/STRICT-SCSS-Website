@@ -1,0 +1,64 @@
+
+.services{
+  padding: 55px 0px;
+  .wrapper{
+    @include flex;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    text-align: center;
+    .main-service{
+      @include flex-basis(29%);
+      @include breakpoint(Tablet){
+        @include flex-basis(100%);
+        margin-bottom: 11%;
+      }
+      @include breakpoint(Phone){
+        margin-bottom: 16%;
+      }
+      @include breakpoint(samll-display){
+        margin-bottom: 25%;
+      }
+      span{
+        padding:21px;
+        margin-bottom: 5%;
+        display: inline-block;
+        background: -webkit-gradient(linear, right top, left top, color-stop(50%, #5FC3FF), color-stop(50%, #48BAFF));
+        background: -o-linear-gradient(right, #5FC3FF 50%, #48BAFF 50%);
+        background: linear-gradient(to left, #5FC3FF 50%, #48BAFF 50%);
+        text-indent: -9999px; 
+        &::before {
+          content: "";
+          padding:7px;
+          font : 900 30px "Font Awesome 5 Free";
+          color:$pure;
+          float: right;
+          text-indent: 0;                   
+        }
+      }
+      .device::before{  content: '\f3cd';
+        padding: 8px 15px;
+        }
+      .design::before{  content: '\f1d8'; }
+      .icon::before{  content: '\f0a1'; }
+
+      h4 {
+        font-size: 22px;
+        font-family: sans-serif;
+        margin: 12px 0px;
+        text-transform: capitalize;
+      }
+      p {
+        font: 15px sans-serif;
+        color: $gray;
+        line-height: 22px;
+      }
+      &:hover{
+        -webkit-box-shadow: -1px -5px 7px -2px;
+                box-shadow: -1px -5px 7px -2px;
+        -webkit-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}

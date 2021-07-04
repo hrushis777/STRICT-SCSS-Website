@@ -1,0 +1,15 @@
+header{
+  width: 100%;
+  padding: 20px 0px;
+  background-color: $bg-color;
+  .wrapper{
+    a{
+      display: inline-block;
+      text-indent: -9999px;
+      img{
+        float: right;
+        text-indent: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin  flex-wrap($value){
+  -ms-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin flex-basis($value){
+  -ms-flex-preferred-size: $value;
+  flex-basis: $value;
+}
+
+@mixin justify-content($value)  {
+  -webkit-box-pack:$value;
+  -ms-flex-pack:$value;
+  justify-content:$value;
+}
+
+
+@mixin align-items($value) {
+  -webkit-box-align: $value;
+  -ms-flex-align: $value;
+  align-items: $value;
+}
+
+
+@mixin flex-direction($value) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: $value ;
+  flex-direction: $value ;
+}
+
+// Breakpoints
+@mixin breakpoint($point) {
+  @if
+  $point == Desktop {
+      @media(max-width:1024px) {  @content; } 
+  } 
+  @else if
+  $point == Tablet{
+      @media(max-width:992px) {  @content; } 
+  } 
+  @else if
+  $point == L-Phone {
+      @media(max-width:720px) {  @content; } 
+  } 
+  @else if
+  $point == Phone {
+      @media(max-width:540px) {  @content; } 
+  } 
+  @else if
+  $point == samll-display {
+      @media(max-width:468px) {  @content; } 
+  } 
+  
+}
+
+//Transitions
+@mixin transition {
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
